@@ -22,7 +22,38 @@ class LearningHash
   end
 
   def value_stringer(hash)
-    
+    value = ''
+    hash.each_value do |v|
+      value << v.to_s
+    end
+    return value.to_s
   end
 
+  def key_and_value_stringer(hash)
+    result = ''
+    hash.each_pair do |k, v|
+      result << k.to_s
+      result << v.to_s
+    end
+    return result.to_s
+  end
+
+  def reversed_key_and_value_stringer(hash)
+    result = ''
+    hash.each_pair do |k, v|
+      result << k.to_s
+      result << v.to_s
+    end
+    return result.to_s.reverse
+  end
+
+  def polite_is_empty?(hash)
+    hash.each do |hash_pair|
+      if hash_pair.empty?
+        return 'Yes ma\'am'
+      else
+        return 'No ma\'am'
+      end
+    end
+  end
 end
