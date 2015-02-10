@@ -20,7 +20,7 @@ RSpec.describe LearningHash do
     end
   end
 
-  xdescribe '#bar_key' do
+  describe '#bar_key' do
     inputs_and_outputs = [
       {input: {}, output: nil},
       {input: {foo: 'bar'}, output: nil},
@@ -38,7 +38,7 @@ RSpec.describe LearningHash do
     end
   end
 
-  xdescribe '#key_stringer' do
+  describe '#key_stringer' do
     inputs_and_outputs = [
       {input: {}, output: ''},
       {input: {nil => 'stuff'}, output: ''},
@@ -59,7 +59,7 @@ RSpec.describe LearningHash do
     end
   end
 
-  xdescribe '#value_stringer' do
+  describe '#value_stringer' do
     inputs_and_outputs = [
       {input: {nil => 'ruby is cool', nil: ' and weird'}, output: 'ruby is cool and weird'},
       {input: {[1,2,3] => [256,512,1024]}, output: '[256, 512, 1024]'},
